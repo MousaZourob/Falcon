@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import alpacaAPI from '../services/alpaca'
 
 class DashboardScreen extends React.Component {
     
@@ -10,6 +11,16 @@ class DashboardScreen extends React.Component {
         super(props)
         
         this.state = {}
+    }
+
+    componentDidMount() {
+        console.log('fetch data from alpaca')
+
+        const api = alpacaAPI()
+
+        api.getAccount().then((response) => {
+            console.log(response)
+        })
     }
 
     render() {
