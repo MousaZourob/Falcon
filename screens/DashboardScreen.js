@@ -38,10 +38,8 @@ class DashboardScreen extends React.Component {
     }
 
     render() {
-        return <View>
-            <Text>Dashboard Screen</Text>
-            
-            <View>
+        return <View style = {{flex: 1, flexDirection: 'column'}}>
+            <View style = {{flex: 1, borderWidth: 1, borderColor: 'blue'}}>
                 <Text>Buying Power</Text>
                 <Text>{this.state.buying_power}</Text>
                 <Text>Long Market Value</Text>
@@ -50,6 +48,19 @@ class DashboardScreen extends React.Component {
                 <Text>{this.state.portfolio_value}</Text>
                 <Text>Cash</Text>
                 <Text>{this.state.cash}</Text>
+            </View>
+            <View style = {{flex: 1, borderWidth: 1, borderColor: 'red'}}>
+                <Text>Market:</Text>
+
+                <View style = {{flex: 1, flexDirection: 'row'}}>
+                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>DIA</Text></View>
+                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>SPY</Text></View>
+                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>QAA</Text></View>
+                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>IWM</Text></View>
+                </View>
+            </View>
+            <View style = {{flex: 1, borderWidth: 1, borderColor: 'green'}}>
+
             </View>
         </View>
     }
