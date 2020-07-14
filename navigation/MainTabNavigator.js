@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import TabBarIcon from '../components/TabBarIcon';
 import DashboardScreen from '../screens/DashboardScreen.js';
+import ActivityScreen from '../screens/ActivityScreen.js';
+import SearchScreen from '../screens/SearchScreen.js';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const config = Platform.select({
@@ -12,6 +14,7 @@ const config = Platform.select({
   default: {},
 });
 
+// Dashboard screen stack
 const DashboardStack = createStackNavigator(
   {
     Dashboard: DashboardScreen,
@@ -35,6 +38,58 @@ DashboardStack.navigationOptions = {
 
 DashboardStack.path = '';
 
+
+// Activity screen stack
+const ActivityStack = createStackNavigator(
+  {
+    Activity: ActivityScreen,
+  },
+  config
+);
+
+ActivityStack.navigationOptions = {
+  tabBarLabel: 'Activity',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-pulse'}`
+          : 'md-pulse'
+      }
+    />
+  ),
+};
+
+ActivityStack.path = '';
+
+
+// Search screen stack
+const SearchStack = createStackNavigator(
+  {
+    Search: SearchScreen,
+  },
+  config
+);
+
+SearchStack.navigationOptions = {
+  tabBarLabel: 'Search',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-search'}`
+          : 'md-search'
+      }
+    />
+  ),
+};
+
+SearchStack.path = '';
+
+
+// Settings screen stack
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -51,8 +106,12 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+
+// Bottom tab navigator contents
 const tabNavigator = createBottomTabNavigator({
   DashboardStack,
+  ActivityStack,
+  SearchStack,
   SettingsStack,
 });
 
