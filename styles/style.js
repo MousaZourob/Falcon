@@ -14,5 +14,13 @@ export const dashboardStyle = StyleSheet.create({
     label: {
         fontSize: 16,
         fontWeight: 'bold'
-    }
+    },
+    accountCell: {
+        flex: 1,
+        flexDirection: 'row'
+    },
+    subCell: {
+        flex: 1,
+        
+    },
 })

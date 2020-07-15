@@ -45,18 +45,18 @@ class DashboardScreen extends React.Component {
             <View style = {dashboardStyle.account}>
                 <Text style = {dashboardStyle.heading}>Account</Text>
 
-                <View style = {{flex: 1, flexDirection: 'row'}}>
-                    <View style = {{flex: 1}}>
-                        <Text>Buying Power: </Text>
+                <View style = {dashboardStyle.accountCell}>
+                    <View style = {dashboardStyle.subCell}>
+                        <Text style = {dashboardStyle.label}>Buying Power:</Text>
                         <Text>{this.state.buying_power}</Text>
-                        <Text>Long Market Value: </Text>
+                        <Text style = {dashboardStyle.label}>Long Market Value:</Text>
                         <Text>{this.state.long_market_value}</Text>
                     </View>
                     
-                    <View style = {{flex: 1}}>
-                        <Text>Portfolio Value: </Text>
+                    <View style = {dashboardStyle.subCell}>
+                        <Text style = {dashboardStyle.label}>Portfolio Value:</Text>
                         <Text>{this.state.portfolio_value}</Text>
-                        <Text>Cash: </Text>
+                        <Text style = {dashboardStyle.label}>Cash:</Text>
                         <Text>{this.state.cash}</Text>
                     </View>
                 </View>
