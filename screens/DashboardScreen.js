@@ -40,6 +40,7 @@ class DashboardScreen extends React.Component {
     render() {
         return <View style = {{flex: 1, flexDirection: 'column'}}>
             <View style = {{flex: 1, borderWidth: 1, borderColor: 'blue'}}>
+                <Text style = {{fontSize: 20}}>Account</Text>
                 <Text>Buying Power</Text>
                 <Text>{this.state.buying_power}</Text>
                 <Text>Long Market Value</Text>
