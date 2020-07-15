@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
 import { dashboardStyle } from '../styles/style'
+import { AppOwnership } from 'expo-constants';
 
 class DashboardScreen extends React.Component {
     
@@ -16,6 +17,7 @@ class DashboardScreen extends React.Component {
             cash: 0,
             long_market_value: 0,
             portfolio_value: 0,
+            positions: []
         }
     }
 
@@ -36,6 +38,15 @@ class DashboardScreen extends React.Component {
                 })
             }
         })
+
+        api.getPositions().then((response) => {
+            console.log(response)
+            if (response.ok) {
+                this.setState({
+                    positions: response.data
+                })
+            }
+        }) 
     }
 
     render() {
@@ -76,7 +87,11 @@ class DashboardScreen extends React.Component {
 
             {/*Portfolio info view*/}
             <View style = {{flex: 5, borderWidth: 1, borderColor: 'green'}}>
-
+                {this.state.positions.map((position) => {
+                    return <Text>
+                        {position.symbol}
+                    </Text>
+                })}
             </View>
         </View>
     }
