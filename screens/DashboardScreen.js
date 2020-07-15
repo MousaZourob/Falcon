@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
+import { dashboardStyle } from '../styles/style'
 
 class DashboardScreen extends React.Component {
     
@@ -41,8 +42,8 @@ class DashboardScreen extends React.Component {
         return <View style = {{flex: 1, flexDirection: 'column'}}>
             
             {/*Account info view*/}
-            <View style = {{flex: 3, borderWidth: 1, borderColor: 'blue'}}>
-                <Text style = {{fontSize: 20}}>Account</Text>
+            <View style = {dashboardStyle.account}>
+                <Text style = {dashboardStyle.heading}>Account</Text>
 
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {{flex: 1}}>
