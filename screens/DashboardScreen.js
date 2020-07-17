@@ -2,6 +2,7 @@ import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
 import { dashboardStyle } from '../styles/style'
+import { Ionicons } from '@expo/vector-icons'
 
 class DashboardScreen extends React.Component {
     
@@ -56,8 +57,11 @@ class DashboardScreen extends React.Component {
                     <Text style = {dashboardStyle.subheading}> {item.qty} @ {item.avg_entry_price} </Text>
                 </View>
                 <View style = {dashboardStyle.positionsRightCell}>
-                    <Text style = {dashboardStyle.price}> {item.current_price} </Text>
-                    <Text style = {dashboardStyle.subheading}> {(item.change_today * 100).toFixed(2)} </Text>
+                    <Text style = {dashboardStyle.price}> {item.current_price} </Text> 
+                    <Text style = {dashboardStyle.subheading}>
+                        {(item.change_today * 100).toFixed(2)} {/*make arrow up or down based on stock*/}
+                        <Ionicons name="md-arrow-dropdown" size={22} color="green"></Ionicons> {/*make text red or green based on stock*/}
+                    </Text> 
                 </View>
             </View> 
         )
