@@ -39,7 +39,11 @@ export const dashboardStyle = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold'
     },
-    entryPrice: {
+    price: {
+        fontSize: 16,
+        color: 'green'
+    },
+    subheading: {
         color: '#808080'
     }
 })
