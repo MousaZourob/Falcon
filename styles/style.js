@@ -19,7 +19,16 @@ export const dashboardStyle = StyleSheet.create({
         flexDirection: 'row'
     },
     subCell: {
-        flex: 1,
-        
+        flex: 1
     },
+    positions: {
+        flex: 1,
+        flexDirection: 'row'
+    },
+    positionsLeftCell: {
+        flex: 4
+    },
+    positionsRightCell: {
+        flex: 1
+    }
 })
