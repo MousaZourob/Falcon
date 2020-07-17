@@ -23,12 +23,23 @@ export const dashboardStyle = StyleSheet.create({
     },
     position: {
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        margin: 5,
+        borderWidth: 1,
+        padding: 5,
+        borderRadius: 10
     },
     positionsLeftCell: {
         flex: 4
     },
     positionsRightCell: {
         flex: 1
+    },
+    tickerSymbol: {
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
+    entryPrice: {
+        color: '#808080'
     }
 })

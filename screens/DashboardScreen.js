@@ -52,12 +52,12 @@ class DashboardScreen extends React.Component {
         return (
             <View key = {item.asset_id} style = {dashboardStyle.position}>
                 <View style = {dashboardStyle.positionsLeftCell}>
-                    <Text> {item.symbol} </Text>
-                    <Text> {(item.change_today * 100).toFixed(2)} </Text>
+                    <Text style = {dashboardStyle.tickerSymbol}> {item.symbol} </Text>
+                    <Text style = {dashboardStyle.entryPrice}> {item.qty} @ {item.avg_entry_price} </Text>
                 </View>
                 <View style = {dashboardStyle.positionsRightCell}>
                     <Text> {item.current_price} </Text>
-                    <Text> {item.qty} @ {item.avg_entry_price} </Text>
+                    <Text> {(item.change_today * 100).toFixed(2)} </Text>
                 </View>
             </View> 
         )
