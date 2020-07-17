@@ -1,8 +1,7 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
 import { dashboardStyle } from '../styles/style'
-import { AppOwnership } from 'expo-constants';
 
 class DashboardScreen extends React.Component {
     
@@ -49,9 +48,21 @@ class DashboardScreen extends React.Component {
         }) 
     }
 
+    renderRow = ({item}) => {
+        return (
+            <View key = {item.asset_id} style = {dashboardStyle.positions}>
+                <View style = {dashboardStyle.positionsLeftCell}>
+                    <Text> {item.symbol} </Text>
+                </View>
+                <View style = {dashboardStyle.positionsRightCell}>
+                    <Text> {item.current_price} </Text>
+                </View>
+            </View> 
+        )
+    }
+    
     render() {
         return <View style = {{flex: 1, flexDirection: 'column'}}>
-            
             {/*Account info view*/}
             <View style = {dashboardStyle.account}>
                 <Text style = {dashboardStyle.heading}>Account</Text>
@@ -87,11 +98,11 @@ class DashboardScreen extends React.Component {
 
             {/*Portfolio info view*/}
             <View style = {{flex: 5, borderWidth: 1, borderColor: 'green'}}>
-                {this.state.positions.map((position) => {
-                    return <Text>
-                        {position.symbol}
-                    </Text>
-                })}
+                <FlatList 
+                    data = {this.state.positions}
+                    renderItem = {this.renderRow}
+                    keyExtractor = {item => item.asset_id}
+                />
             </View>
         </View>
     }
