@@ -1,4 +1,4 @@
-node_modules/**/*
+node_modules/*/
 .expo/*
 npm-debug.*
 *.jks
@@ -6,10 +6,11 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
-*.orig.*
+.orig.
 web-build/
 web-report/
 config.js
 
 # macOS
 .DS_Store
+node_modules

@@ -50,7 +50,7 @@ class DashboardScreen extends React.Component {
 
     renderRow = ({item}) => {
         return (
-            <View key = {item.asset_id} style = {dashboardStyle.positions}>
+            <View key = {item.asset_id} style = {dashboardStyle.position}>
                 <View style = {dashboardStyle.positionsLeftCell}>
                     <Text> {item.symbol} </Text>
                     <Text> {(item.change_today * 100).toFixed(2)} </Text>
