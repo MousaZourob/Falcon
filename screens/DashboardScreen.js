@@ -104,26 +104,26 @@ class DashboardScreen extends React.Component {
             </View>
 
             {/*Market info view*/}
-            <View style = {{flex: 3, borderWidth: 1, borderColor: 'red'}}>
+            <View style = {{flex: 3}}>
                 <Text style = {dashboardStyle.pHeading}>Market</Text>
 
                 <View style = {{flex: 1, flexDirection: 'row'}}>
-                    <View style = {{flex: 1, borderWidth: 1}}>
+                    <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
                         <Text style = {dashboardStyle.indexPrice}>286</Text>
                     </View>
 
-                    <View style = {{flex: 1, borderWidth: 1}}>
+                    <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
                         <Text style = {dashboardStyle.indexPrice}>322.5</Text>
                     </View>
 
-                    <View style = {{flex: 1, borderWidth: 1}}>
+                    <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>QAA</Text>
                         <Text style = {dashboardStyle.indexPrice}>213.33</Text>
                     </View>
 
-                    <View style = {{flex: 1, borderWidth: 1}}>
+                    <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
                         <Text style = {dashboardStyle.indexPrice}>166.53</Text>
                     </View>

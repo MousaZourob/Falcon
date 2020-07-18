@@ -58,5 +58,12 @@ export const dashboardStyle = StyleSheet.create({
     },
     indexPrice: {
         fontSize: 18
+    },
+    scoreBoard: {
+        flex: 1, 
+        borderWidth: 1,
+        alignItems: 'center',
+        backgroundColor: 'green',
+        margin: 5
     }
 })
