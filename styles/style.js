@@ -54,10 +54,12 @@ export const dashboardStyle = StyleSheet.create({
         color: '#808080'
     },
     indexSymbol: {
-        fontSize: 30
+        fontSize: 30,
+        color: 'white',
     },
     indexPrice: {
-        fontSize: 18
+        fontSize: 18,
+        color: 'white'
     },
     scoreBoard: {
         flex: 1, 
