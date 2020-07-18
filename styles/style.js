@@ -21,6 +21,11 @@ export const dashboardStyle = StyleSheet.create({
     subCell: {
         flex: 1
     },
+    pHeading: {
+        margin: 15,
+        fontSize: 24,
+        fontWeight: 'bold'
+    },
     position: {
         flex: 1,
         flexDirection: 'row',
@@ -45,5 +50,5 @@ export const dashboardStyle = StyleSheet.create({
     },
     subheading: {
         color: '#808080'
-    }
+    },
 })

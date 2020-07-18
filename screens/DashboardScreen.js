@@ -46,7 +46,9 @@ class DashboardScreen extends React.Component {
         }) 
 
         // Polygon API
+        const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
         const polygon = polygonAPI()
+
         polygon.getQuote('SPY').then((response) => {
             console.log('response from polygon API')
             console.log(response)
@@ -108,7 +110,8 @@ class DashboardScreen extends React.Component {
             </View>
 
             {/*Portfolio info view*/}
-            <View style = {{flex: 5, borderWidth: 1, borderColor: 'green'}}>
+            <View style = {{flex: 5}}>
+                <Text style = {dashboardStyle.pHeading}>Positions</Text>
                 <FlatList 
                     data = {this.state.positions}
                     renderItem = {this.renderRow}

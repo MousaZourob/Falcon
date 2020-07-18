@@ -11,7 +11,7 @@ const alpacaAPI = (baseURL = config.ALPACA_URL) => {
         },
         timout: 5000
     })
-
+    
     const getAccount = () => api.get('v2/account')
     const getPositions = () => api.get('v2/positions')
 
