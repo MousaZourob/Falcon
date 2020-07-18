@@ -1,6 +1,7 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
+import polygonAPI from '../services/polygon'
 import { dashboardStyle } from '../styles/style'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -22,13 +23,10 @@ class DashboardScreen extends React.Component {
     }
 
     componentDidMount() {
-        console.log('fetch data from alpaca')
+        // Alpaca API
+        const alpaca = alpacaAPI()
 
-        const api = alpacaAPI()
-
-        api.getAccount().then((response) => {
-            console.log(response)
-
+        alpaca.getAccount().then((response) => {
             if (response.ok) {
                 this.setState({
                     buying_power: response.data.buying_power,
@@ -39,14 +37,21 @@ class DashboardScreen extends React.Component {
             }
         })
 
-        api.getPositions().then((response) => {
-            console.log(response)
+        alpaca.getPositions().then((response) => {
             if (response.ok) {
                 this.setState({
                     positions: response.data
                 })
             }
         }) 
+
+        // Polygon API
+        const polygon = polygonAPI()
+        polygon.getQuote('SPY').then((response) => {
+            console.log('response from polygon API')
+            console.log(response)
+        })
+
     }
 
     renderRow = ({item}) => {
