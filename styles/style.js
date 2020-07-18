@@ -66,6 +66,7 @@ export const dashboardStyle = StyleSheet.create({
         borderWidth: 1,
         alignItems: 'center',
         backgroundColor: 'green',
-        margin: 5
+        margin: 5,
+        borderRadius: 10
     }
 })
