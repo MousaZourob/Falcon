@@ -45,15 +45,21 @@ class DashboardScreen extends React.Component {
             }
         }) 
 
-        // Polygon API
-        const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
+        // For when I get polygon api to work
+        /*const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
         const polygon = polygonAPI()
 
-        polygon.getQuote('SPY').then((response) => {
-            console.log('response from polygon API')
-            console.log(response)
-        })
+        symbols.map((symbol) => {
+            polygon.getQuote('SPY').then((response) => {
+                console.log('response from polygon API')
+                console.log(response)
+                
+                let state = this.state
+                state[symbol] = response.data.ticker.lastTrade.p
 
+                this.setState(state)
+            })
+        })*/
     }
 
     renderRow = ({item}) => {
@@ -98,14 +104,29 @@ class DashboardScreen extends React.Component {
             </View>
 
             {/*Market info view*/}
-            <View style = {{flex: 2, borderWidth: 1, borderColor: 'red'}}>
-                <Text>Market:</Text>
+            <View style = {{flex: 3, borderWidth: 1, borderColor: 'red'}}>
+                <Text style = {dashboardStyle.pHeading}>Market</Text>
 
                 <View style = {{flex: 1, flexDirection: 'row'}}>
-                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>DIA</Text></View>
-                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>SPY</Text></View>
-                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>QAA</Text></View>
-                    <View style = {{flex: 1, borderWidth: 1, borderColor: 'orange'}}><Text>IWM</Text></View>
+                    <View style = {{flex: 1, borderWidth: 1}}>
+                        <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
+                        <Text style = {dashboardStyle.indexPrice}>286</Text>
+                    </View>
+
+                    <View style = {{flex: 1, borderWidth: 1}}>
+                        <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
+                        <Text style = {dashboardStyle.indexPrice}>322.5</Text>
+                    </View>
+
+                    <View style = {{flex: 1, borderWidth: 1}}>
+                        <Text style = {dashboardStyle.indexSymbol}>QAA</Text>
+                        <Text style = {dashboardStyle.indexPrice}>213.33</Text>
+                    </View>
+
+                    <View style = {{flex: 1, borderWidth: 1}}>
+                        <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
+                        <Text style = {dashboardStyle.indexPrice}>166.53</Text>
+                    </View>
                 </View>
             </View>
 

@@ -6,7 +6,7 @@ export const dashboardStyle = StyleSheet.create({
         flex: 3, 
     },
     heading: {
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: 'bold'
     },
     label: {
@@ -22,8 +22,10 @@ export const dashboardStyle = StyleSheet.create({
         flex: 1
     },
     pHeading: {
-        margin: 15,
-        fontSize: 24,
+        marginLeft: 15,
+        marginTop: 5,
+        marginBottom: 5,
+        fontSize: 22,
         fontWeight: 'bold'
     },
     position: {
@@ -51,4 +53,10 @@ export const dashboardStyle = StyleSheet.create({
     subheading: {
         color: '#808080'
     },
+    indexSymbol: {
+        fontSize: 30
+    },
+    indexPrice: {
+        fontSize: 18
+    }
 })
