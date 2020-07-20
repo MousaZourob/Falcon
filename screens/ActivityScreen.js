@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import alpacaAPI from '../services/alpaca'
 
 class ActivityScreen extends React.Component {
     
@@ -10,6 +11,18 @@ class ActivityScreen extends React.Component {
         super(props)
         
         this.state = {}
+    }
+
+    componentDidMount() {
+        // Alpaca API
+        const alpaca = alpacaAPI()
+        
+        // Activities request
+        alpaca.getActivities().then((response) => {
+            if (response.ok) {
+                console.log(response)
+            }
+        })
     }
 
     render() {
