@@ -10,7 +10,9 @@ class ActivityScreen extends React.Component {
     constructor(props) {
         super(props)
         
-        this.state = {}
+        this.state = {
+            activities: []
+        }
     }
 
     componentDidMount() {
@@ -21,13 +23,19 @@ class ActivityScreen extends React.Component {
         alpaca.getActivities().then((response) => {
             if (response.ok) {
                 console.log(response)
+                this.setState({
+                    activities: response.data
+                })
             }
         })
     }
 
     render() {
         return <View>
-            <Text>Activity Screen</Text>
+            {this.state.activities.map((activity) => <View>
+                    <Text>activity</Text>
+                </View>
+            )}
         </View>
     }
 }
