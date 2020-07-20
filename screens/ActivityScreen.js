@@ -35,7 +35,7 @@ class ActivityScreen extends React.Component {
             {this.state.activities.map((activity) => <View>
                     <Text>{activity.symbol}</Text>
                     <Text>{activity.side} {activity.qty} @ {activity.price}</Text>
-                    <Text>{activity.transaction_time}</Text>
+                    <Text>{activity.transaction_time.substring(0,10)}</Text>
                 </View>
             )}
         </View>
