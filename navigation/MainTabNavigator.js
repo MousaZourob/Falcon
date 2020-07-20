@@ -6,7 +6,6 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import DashboardScreen from '../screens/DashboardScreen.js';
 import ActivityScreen from '../screens/ActivityScreen.js';
-import SearchScreen from '../screens/SearchScreen.js';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const config = Platform.select({
@@ -64,31 +63,6 @@ ActivityStack.navigationOptions = {
 ActivityStack.path = '';
 
 
-// Search screen stack
-const SearchStack = createStackNavigator(
-  {
-    Search: SearchScreen,
-  },
-  config
-);
-
-SearchStack.navigationOptions = {
-  tabBarLabel: 'Search',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-search'}`
-          : 'md-search'
-      }
-    />
-  ),
-};
-
-SearchStack.path = '';
-
-
 // Settings screen stack
 const SettingsStack = createStackNavigator(
   {
@@ -111,7 +85,6 @@ SettingsStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   DashboardStack,
   ActivityStack,
-  SearchStack,
   SettingsStack,
 });
 
