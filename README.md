@@ -1,2 +1,2 @@
 # Falcon
-Robinhood clone built with react native
+Robinhood clone built using react native and alpaca API
