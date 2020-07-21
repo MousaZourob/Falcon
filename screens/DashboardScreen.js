@@ -44,6 +44,10 @@ class DashboardScreen extends React.Component {
                 })
             }
         }) 
+        
+        alpaca.getAssets().then((response) => {
+            console.log(response)
+        }) 
 
         // For when I get polygon api to work
         /*const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
