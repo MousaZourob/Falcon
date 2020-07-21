@@ -32,7 +32,7 @@ class ActivityScreen extends React.Component {
 
     render() {
         return <View>
-            {this.state.activities.map((activity) => <View key={activity.key}>
+            {this.state.activities.map((activity) => <View key={activity.id}>
                     <Text>{activity.symbol}</Text>
                     <Text>{activity.side} {activity.qty} @ {activity.price}</Text>
                     <Text>{activity.transaction_time.substring(0,10)}</Text>
