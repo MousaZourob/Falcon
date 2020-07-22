@@ -70,8 +70,11 @@ export const dashboardStyle = StyleSheet.create({
         borderRadius: 10
     },
     activity: {
-        borderColor: '#808080',
+        flex: 1,
+        flexDirection: 'row',
+        margin: 5,
         borderWidth: 1,
-        margin: 0,
+        padding: 5,
+        borderRadius: 5
     }
 })

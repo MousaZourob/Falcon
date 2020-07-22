@@ -35,8 +35,8 @@ class ActivityScreen extends React.Component {
     renderRow = ({item}) => {
         return (
             <View key = {item.asset_id} style = {dashboardStyle.activity}>
-                <Text> {item.symbol} </Text>
-                <Text> {item.side} {item.qty} @ {item.price}</Text>
+                <Text> {item.side.toUpperCase()} {item.symbol} </Text>
+                <Text>  {item.qty} @ {item.price}</Text>
                 <Text> {item.transaction_time.substring(0,10)} </Text>
             </View> 
         )
