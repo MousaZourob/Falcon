@@ -76,5 +76,12 @@ export const dashboardStyle = StyleSheet.create({
         borderWidth: 1,
         padding: 5,
         borderRadius: 5
+    },
+    activityLeftCell: {
+        flex: 4
+    },
+    activityRightCell: {
+        flex: 2,
+        marginLeft: 70
     }
 })
