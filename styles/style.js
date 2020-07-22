@@ -68,5 +68,10 @@ export const dashboardStyle = StyleSheet.create({
         backgroundColor: 'green',
         margin: 5,
         borderRadius: 10
+    },
+    activity: {
+        borderColor: '#808080',
+        borderWidth: 1,
+        margin: 0,
     }
 })
