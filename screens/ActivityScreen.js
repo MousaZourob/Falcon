@@ -44,6 +44,7 @@ class ActivityScreen extends React.Component {
 
     render() {
         return <View>
+            <Text style = {dashboardStyle.pHeading}>Orders</Text>
             <FlatList 
                 data = {this.state.activities}
                 renderItem = {this.renderRow}
