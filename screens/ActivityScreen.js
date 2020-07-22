@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
+import { dashboardStyle } from '../styles/style'
 
 class ActivityScreen extends React.Component {
     
@@ -30,14 +31,23 @@ class ActivityScreen extends React.Component {
         })
     }
 
+    renderRow = ({item}) => {
+        return (
+            <View key = {item.asset_id}>
+                <Text> {item.symbol} </Text>
+                <Text> {item.side} {item.qty} @ {item.price}</Text>
+                <Text> {item.transaction_time.substring(0,10)} </Text>
+            </View> 
+        )
+    }
+
     render() {
         return <View>
-            {this.state.activities.map((activity) => <View key={activity.id}>
-                    <Text>{activity.symbol}</Text>
-                    <Text>{activity.side} {activity.qty} @ {activity.price}</Text>
-                    <Text>{activity.transaction_time.substring(0,10)}</Text>
-                </View>
-            )}
+            <FlatList 
+                data = {this.state.activities}
+                renderItem = {this.renderRow}
+                keyExtractor = {item => item.asset_id}
+            />
         </View>
     }
 }
