@@ -89,7 +89,7 @@ export const dashboardStyle = StyleSheet.create({
         flex: 1, 
         borderWidth: 1,
         alignItems: 'center',
-        backgroundColor: 'green',
+        backgroundColor: '#1767a6',
         margin: 5,
         borderRadius: 10
     },

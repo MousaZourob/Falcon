@@ -117,22 +117,22 @@ class DashboardScreen extends React.Component {
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
-                        <Text style = {dashboardStyle.indexPrice}>286 <Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons></Text>
+                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 286</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
-                        <Text style = {dashboardStyle.indexPrice}>322.5 <Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons></Text>
+                        <Text style = {dashboardStyle.indexPrice}> <Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 322.5</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>QAA</Text>
-                        <Text style = {dashboardStyle.indexPrice}>213.33 <Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons></Text>
+                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 213.33</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
-                        <Text style = {dashboardStyle.indexPrice}>166.53 <Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons></Text>
+                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 166.53</Text>
                     </View>
                 </View>
             </View>
