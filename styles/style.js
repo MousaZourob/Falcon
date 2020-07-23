@@ -11,8 +11,8 @@ export const dashboardStyle = StyleSheet.create({
         marginTop: 15,
         margin: 5,
         flex: 3, 
-        backgroundColor: '#1e222d',
-        paddingBottom: 10,
+        backgroundColor: '#2a2e39',
+        paddingBottom: 15,
         paddingLeft: 10,
         paddingTop: 5
     },

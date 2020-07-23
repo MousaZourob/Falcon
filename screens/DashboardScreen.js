@@ -9,6 +9,12 @@ class DashboardScreen extends React.Component {
     
     static navigationOptions = {
         title: 'Dashboard',
+        headerStyle: {
+            backgroundColor: '#1e222d',
+        },
+        headerTitleStyle: {
+            color: 'white'
+        }
     };
     constructor(props) {
         super(props)
