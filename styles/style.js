@@ -38,12 +38,17 @@ export const dashboardStyle = StyleSheet.create({
         flex: 1
     },
     pHeading: {
-        marginLeft: 15,
+        marginLeft: 10,
         marginTop: 5,
         marginBottom: 5,
         fontSize: 22,
         fontWeight: 'bold',
         color: 'white'
+    },
+    market: {
+        flex: 3,
+        backgroundColor: '#2a2e39',
+        margin: 5,
     },
     position: {
         flex: 1,

@@ -111,7 +111,7 @@ class DashboardScreen extends React.Component {
             </View>
 
             {/*Market info view*/}
-            <View style = {{flex: 3}}>
+            <View style = {dashboardStyle.market}>
                 <Text style = {dashboardStyle.pHeading}>Market</Text>
 
                 <View style = {{flex: 1, flexDirection: 'row'}}>
