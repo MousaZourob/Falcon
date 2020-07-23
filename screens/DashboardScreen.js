@@ -71,7 +71,7 @@ class DashboardScreen extends React.Component {
 
     renderRow = ({item}) => {
         return (
-            <View key = {item.asset_id} style = {dashboardStyle.position}>
+            <View key = {item.asset_id} style = {dashboardStyle.positions}>
                 <View style = {dashboardStyle.positionsLeftCell}>
                     <Text style = {dashboardStyle.tickerSymbol}> {item.symbol} </Text>
                     <Text style = {dashboardStyle.subheading}> {item.qty} @ {item.avg_entry_price} </Text>
@@ -138,7 +138,7 @@ class DashboardScreen extends React.Component {
             </View>
 
             {/*Portfolio info view*/}
-            <View style = {{flex: 5}}>
+            <View style = {dashboardStyle.position}>
                 <Text style = {dashboardStyle.pHeading}>Positions</Text>
                 <FlatList 
                     data = {this.state.positions}
