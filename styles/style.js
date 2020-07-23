@@ -8,9 +8,12 @@ export const dashboardStyle = StyleSheet.create({
         color: 'white'
     },
     account: {
-        margin: 15,
+        marginTop: 15,
+        margin: 5,
         flex: 3, 
-        backgroundColor: '#1e222d'
+        backgroundColor: '#1e222d',
+        paddingBottom: 5,
+        paddingLeft: 10
     },
     heading: {
         fontSize: 22,

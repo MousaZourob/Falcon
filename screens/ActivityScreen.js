@@ -24,7 +24,6 @@ class ActivityScreen extends React.Component {
         // Activities request
         alpaca.getActivities().then((response) => {
             if (response.ok) {
-                console.log(response)
                 this.setState({
                     activities: response.data
                 })
