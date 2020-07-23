@@ -104,25 +104,4 @@ export const dashboardStyle = StyleSheet.create({
         borderRadius: 10,
         marginBottom: -3
     },
-    activity: {
-        flex: 1,
-        flexDirection: 'row',
-        margin: 5,
-        borderWidth: 1,
-        padding: 5,
-        borderRadius: 5
-    },
-    activityLeftCell: {
-        flex: 4,
-    },
-    activityRightCell: {
-        flex: 2,
-        marginLeft: 70
-    },
-    activitySymbol: {
-        fontWeight: 'bold'
-    },
-    activityDate: {
-        color: '#808080'
-    }
 })
