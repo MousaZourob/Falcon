@@ -122,12 +122,12 @@ class DashboardScreen extends React.Component {
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
-                        <Text style = {dashboardStyle.indexPrice}> <Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 322.5</Text>
+                        <Text style = {dashboardStyle.indexPrice}> <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 322.5</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>QAA</Text>
-                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 213.33</Text>
+                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 213.33</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
