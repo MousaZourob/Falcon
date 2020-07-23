@@ -2,7 +2,7 @@ import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
 import polygonAPI from '../services/polygon'
-import { dashboardStyle } from '../styles/style'
+import { dashboardStyle } from '../styles/dashboardStyle'
 import { Ionicons } from '@expo/vector-icons'
 
 class DashboardScreen extends React.Component {

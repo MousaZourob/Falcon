@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
-import { dashboardStyle } from '../styles/style'
+import { dashboardStyle } from '../styles/dashboardStyle'
 import DashboardScreen from './DashboardScreen';
 
 class ActivityScreen extends React.Component {
