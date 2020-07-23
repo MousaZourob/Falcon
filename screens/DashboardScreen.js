@@ -77,7 +77,7 @@ class DashboardScreen extends React.Component {
                     <Text style = {dashboardStyle.subheading}> {item.qty} @ {item.avg_entry_price} </Text>
                 </View>
                 <View style = {dashboardStyle.positionsRightCell}>
-                    <Text style = {dashboardStyle.price}> {item.current_price} </Text> 
+                    <Text style = {dashboardStyle.price}>${item.current_price} </Text> 
                     <Text style = {dashboardStyle.change}>
                         {(item.change_today * 100).toFixed(2)} {/*make arrow up or down based on stock*/}
                         <Ionicons name="md-arrow-dropdown" size={22} color="green"></Ionicons> {/*make text red or green based on stock*/}
@@ -96,16 +96,16 @@ class DashboardScreen extends React.Component {
                 <View style = {dashboardStyle.accountCell}>
                     <View style = {dashboardStyle.subCell}>
                         <Text style = {dashboardStyle.label}>Buying Power:</Text>
-                        <Text style = {dashboardStyle.accountInfo}>{this.state.buying_power}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>${this.state.buying_power}</Text>
                         <Text style = {dashboardStyle.label}>Long Market Value:</Text>
-                        <Text style = {dashboardStyle.accountInfo}>{this.state.long_market_value}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>${this.state.long_market_value}</Text>
                     </View>
                     
                     <View style = {dashboardStyle.subCell}>
                         <Text style = {dashboardStyle.label}>Portfolio Value:</Text>
-                        <Text style = {dashboardStyle.accountInfo}>{this.state.portfolio_value}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>${this.state.portfolio_value}</Text>
                         <Text style = {dashboardStyle.label}>Cash:</Text>
-                        <Text style = {dashboardStyle.accountInfo}>{this.state.cash}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>${this.state.cash}</Text>
                     </View>
                 </View>
             </View>
