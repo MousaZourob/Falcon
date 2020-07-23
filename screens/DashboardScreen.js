@@ -85,7 +85,7 @@ class DashboardScreen extends React.Component {
     }
     
     render() {
-        return <View style = {{flex: 1, flexDirection: 'column'}}>
+        return <View style = {dashboardStyle.screen}>
             {/*Account info view*/}
             <View style = {dashboardStyle.account}>
                 <Text style = {dashboardStyle.heading}>Account</Text>

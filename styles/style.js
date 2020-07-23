@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native'
 
 export const dashboardStyle = StyleSheet.create({
+    screen: {
+        backgroundColor: '#131722',
+        flex: 1, 
+        flexDirection: 'column',
+    },
     account: {
         margin: 15,
         flex: 3, 
