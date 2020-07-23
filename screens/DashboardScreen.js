@@ -78,7 +78,7 @@ class DashboardScreen extends React.Component {
                 </View>
                 <View style = {dashboardStyle.positionsRightCell}>
                     <Text style = {dashboardStyle.price}> {item.current_price} </Text> 
-                    <Text style = {dashboardStyle.subheading}>
+                    <Text style = {dashboardStyle.change}>
                         {(item.change_today * 100).toFixed(2)} {/*make arrow up or down based on stock*/}
                         <Ionicons name="md-arrow-dropdown" size={22} color="green"></Ionicons> {/*make text red or green based on stock*/}
                     </Text> 
