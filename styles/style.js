@@ -49,6 +49,8 @@ export const dashboardStyle = StyleSheet.create({
         flex: 3,
         backgroundColor: '#2a2e39',
         margin: 5,
+        paddingTop: 5,
+        paddingBottom: 10
     },
     position: {
         flex: 1,
