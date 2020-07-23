@@ -5,23 +5,30 @@ export const dashboardStyle = StyleSheet.create({
         backgroundColor: '#131722',
         flex: 1, 
         flexDirection: 'column',
+        color: 'white'
     },
     account: {
         margin: 15,
         flex: 3, 
+        backgroundColor: '#1e222d'
     },
     heading: {
         fontSize: 22,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: 'white'
     },
     label: {
         paddingTop: 10,
         fontSize: 16,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: 'white'
+    },
+    accountInfo: {
+        color: 'white'
     },
     accountCell: {
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     subCell: {
         flex: 1
@@ -31,7 +38,8 @@ export const dashboardStyle = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5,
         fontSize: 22,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: 'white'
     },
     position: {
         flex: 1,

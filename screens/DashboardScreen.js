@@ -45,9 +45,6 @@ class DashboardScreen extends React.Component {
             }
         }) 
         
-        alpaca.getAssets().then((response) => {
-            console.log(response)
-        }) 
 
         // For when I get polygon api to work
         /*const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
@@ -93,16 +90,16 @@ class DashboardScreen extends React.Component {
                 <View style = {dashboardStyle.accountCell}>
                     <View style = {dashboardStyle.subCell}>
                         <Text style = {dashboardStyle.label}>Buying Power:</Text>
-                        <Text>{this.state.buying_power}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>{this.state.buying_power}</Text>
                         <Text style = {dashboardStyle.label}>Long Market Value:</Text>
-                        <Text>{this.state.long_market_value}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>{this.state.long_market_value}</Text>
                     </View>
                     
                     <View style = {dashboardStyle.subCell}>
                         <Text style = {dashboardStyle.label}>Portfolio Value:</Text>
-                        <Text>{this.state.portfolio_value}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>{this.state.portfolio_value}</Text>
                         <Text style = {dashboardStyle.label}>Cash:</Text>
-                        <Text>{this.state.cash}</Text>
+                        <Text style = {dashboardStyle.accountInfo}>{this.state.cash}</Text>
                     </View>
                 </View>
             </View>
