@@ -78,10 +78,16 @@ export const dashboardStyle = StyleSheet.create({
         borderRadius: 5
     },
     activityLeftCell: {
-        flex: 4
+        flex: 4,
     },
     activityRightCell: {
         flex: 2,
         marginLeft: 70
+    },
+    activitySymbol: {
+        fontWeight: 'bold'
+    },
+    activityDate: {
+        color: '#808080'
     }
 })
