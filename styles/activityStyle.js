@@ -29,4 +29,10 @@ export const activityStyle = StyleSheet.create({
     date: {
         color: '#808080'
     },
+    screen: {
+        backgroundColor: '#131722',
+        flex: 1, 
+        flexDirection: 'column',
+        color: 'white'
+    },
 })

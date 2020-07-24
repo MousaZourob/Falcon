@@ -7,6 +7,12 @@ class ActivityScreen extends React.Component {
     
     static navigationOptions = {
         title: 'Account Activity',
+        headerStyle: {
+            backgroundColor: '#1e222d',
+        },
+        headerTitleStyle: {
+            color: 'white'
+        }
     };
 
     constructor(props) {
@@ -46,7 +52,7 @@ class ActivityScreen extends React.Component {
     }
 
     render() {
-        return <View>
+        return <View style = {activityStyle.screen}>
             <Text style={activityStyle.pHeading}>Orders</Text>
             <FlatList 
                 data = {this.state.activities}
