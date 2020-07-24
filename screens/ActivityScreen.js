@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
-import { activtyStyle as activityStyle } from '../styles/activityStyle'
+import { activityStyle } from '../styles/activityStyle'
 
 class ActivityScreen extends React.Component {
     
@@ -32,7 +32,7 @@ class ActivityScreen extends React.Component {
 
     renderRow = ({item}) => {
         return (
-            <View key = {item.asset_id}>
+            <View key = {item.asset_id} style = {activityStyle.activity}>
                 <View>
                     <Text> {item.side.toUpperCase()} {item.symbol} </Text>
                     <Text> {item.transaction_time.substring(0,10)} </Text>
@@ -46,7 +46,7 @@ class ActivityScreen extends React.Component {
 
     render() {
         return <View>
-            <Text>Orders</Text>
+            <Text style={activityStyle.pHeading}>Orders</Text>
             <FlatList 
                 data = {this.state.activities}
                 renderItem = {this.renderRow}

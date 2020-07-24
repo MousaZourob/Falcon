@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-export const dashboardStyle = StyleSheet.create({
+export const activityStyle = StyleSheet.create({
     pHeading: {
         marginLeft: 10,
         marginBottom: 5,
