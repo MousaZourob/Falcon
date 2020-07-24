@@ -7,20 +7,28 @@ export const activityStyle = StyleSheet.create({
         flexDirection: 'column',
         color: 'white'
     },
-    pHeading: {
+    heading: {
         marginLeft: 10,
-        marginBottom: 5,
+        margin: 5,
+        marginBottom: 10,
         fontSize: 22,
         fontWeight: 'bold',
         color: 'white'
     },
+    history: {
+        backgroundColor: '#2a2e39',
+        marginTop: 15,
+        margin: 5
+    },
     activity: {
         flex: 1,
         flexDirection: 'row',
-        backgroundColor: '#2a2e39',
         borderColor: 'white',
-        margin: 5,
         borderWidth: 1,
+        backgroundColor: '#135c95',
+        marginTop: 0,
+        margin: 10,
+        marginBottom: 15,
         padding: 5,
         borderRadius: 5
     },
@@ -29,14 +37,14 @@ export const activityStyle = StyleSheet.create({
     },
     rightCell: {
         flex: 2,
-        marginLeft: 70
+        marginLeft: 40
     },
     symbol: {
         fontWeight: 'bold',
         color: 'white'
     },
     date: {
-        color: '#a3a2a2'
+        color: '#bababa'
     },
     qty: {
         color: 'white'

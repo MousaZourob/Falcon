@@ -53,12 +53,14 @@ class ActivityScreen extends React.Component {
 
     render() {
         return <View style = {activityStyle.screen}>
-            <Text style={activityStyle.pHeading}>Orders</Text>
-            <FlatList 
-                data = {this.state.activities}
-                renderItem = {this.renderRow}
-                keyExtractor = {item => item.id}
-            />
+            <View style = {activityStyle.history}>
+                <Text style={activityStyle.heading}>Order history:</Text>
+                <FlatList 
+                    data = {this.state.activities}
+                    renderItem = {this.renderRow}
+                    keyExtractor = {item => item.id}
+                />
+            </View>
         </View>
     }
 }
