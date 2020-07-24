@@ -45,7 +45,7 @@ class ActivityScreen extends React.Component {
                     <Text style = {activityStyle.date}> {item.transaction_time.substring(0,10)} </Text>
                 </View>
                 <View style = {activityStyle.rightCell}>
-                    <Text>  {item.qty} @ {item.price}</Text>
+                    <Text style = {activityStyle.qty}>  {item.qty} @ {item.price}</Text>
                 </View>
             </View> 
         )

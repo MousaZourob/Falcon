@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native'
 
 export const activityStyle = StyleSheet.create({
+    screen: {
+        backgroundColor: '#131722',
+        flex: 1, 
+        flexDirection: 'column',
+        color: 'white'
+    },
     pHeading: {
         marginLeft: 10,
         marginBottom: 5,
@@ -11,6 +17,8 @@ export const activityStyle = StyleSheet.create({
     activity: {
         flex: 1,
         flexDirection: 'row',
+        backgroundColor: '#2a2e39',
+        borderColor: 'white',
         margin: 5,
         borderWidth: 1,
         padding: 5,
@@ -24,15 +32,13 @@ export const activityStyle = StyleSheet.create({
         marginLeft: 70
     },
     symbol: {
-        fontWeight: 'bold'
-    },
-    date: {
-        color: '#808080'
-    },
-    screen: {
-        backgroundColor: '#131722',
-        flex: 1, 
-        flexDirection: 'column',
+        fontWeight: 'bold',
         color: 'white'
     },
+    date: {
+        color: '#a3a2a2'
+    },
+    qty: {
+        color: 'white'
+    }
 })
