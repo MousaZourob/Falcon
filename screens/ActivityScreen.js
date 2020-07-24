@@ -8,6 +8,7 @@ class ActivityScreen extends React.Component {
     static navigationOptions = {
         title: 'Account Activity',
     };
+
     constructor(props) {
         super(props)
         
@@ -32,7 +33,7 @@ class ActivityScreen extends React.Component {
 
     renderRow = ({item}) => {
         return (
-            <View key = {item.asset_id} style = {activityStyle.activity}>
+            <View key = {item.id} style = {activityStyle.activity}>
                 <View style = {activityStyle.leftCell}>
                     <Text style = {activityStyle.symbol}> {item.side.toUpperCase()} {item.symbol} </Text>
                     <Text style = {activityStyle.date}> {item.transaction_time.substring(0,10)} </Text>
@@ -50,7 +51,7 @@ class ActivityScreen extends React.Component {
             <FlatList 
                 data = {this.state.activities}
                 renderItem = {this.renderRow}
-                keyExtractor = {item => item.asset_id}
+                keyExtractor = {item => item.id}
             />
         </View>
     }
