@@ -78,10 +78,14 @@ class DashboardScreen extends React.Component {
                 </View>
                 <View style = {dashboardStyle.positionsRightCell}>
                     <Text style = {dashboardStyle.price}>${item.current_price} </Text> 
-                    <Text style = {dashboardStyle.change}>
-                        {(item.change_today * 100).toFixed(2)} {/*make arrow up or down based on stock*/}
-                        <Ionicons name="md-arrow-dropdown" size={22} color="green"></Ionicons> {/*make text red or green based on stock*/}
-                    </Text> 
+                    {item.avg_entry_price > item.current_price ? <Text style = {dashboardStyle.changeD}>
+                        {(item.change_today * 100).toFixed(2)}% 
+                        <Ionicons name="md-arrow-dropdown" size={22} color="red"></Ionicons> 
+                    </Text>  : null }
+                    {item.avg_entry_price < item.current_price ? <Text style = {dashboardStyle.changeU}>
+                        {(item.change_today * 100).toFixed(2)}% 
+                        <Ionicons name="md-arrow-dropup" size={22} color="green"></Ionicons> 
+                    </Text>  : null }
                 </View>
             </View> 
         )
@@ -117,22 +121,22 @@ class DashboardScreen extends React.Component {
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
-                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 286</Text>
+                        <Text style = {dashboardStyle.indexPrice}>264.69</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
-                        <Text style = {dashboardStyle.indexPrice}> <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 322.5</Text>
+                        <Text style = {dashboardStyle.indexPrice}>320.88</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
-                        <Text style = {dashboardStyle.indexSymbol}>QAA</Text>
-                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 213.33</Text>
+                        <Text style = {dashboardStyle.indexSymbol}>QQQ</Text>
+                        <Text style = {dashboardStyle.indexPrice}>255.56</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
-                        <Text style = {dashboardStyle.indexPrice}><Ionicons name="md-arrow-dropdown" size={22} color="white"></Ionicons> 166.53</Text>
+                        <Text style = {dashboardStyle.indexPrice}>146.08</Text>
                     </View>
                 </View>
             </View>

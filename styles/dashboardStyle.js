@@ -84,7 +84,10 @@ export const dashboardStyle = StyleSheet.create({
     subheading: {
         color: '#bababa'
     },
-    change: {
+    changeD: {
+        color: 'red'
+    },
+    changeU: {
         color: 'green'
     },
     indexSymbol: {
