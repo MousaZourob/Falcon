@@ -23,6 +23,11 @@ const DashboardStack = createStackNavigator(
 
 DashboardStack.navigationOptions = {
   tabBarLabel: 'Dashboard',
+  tabBarOptions:{
+    style: {
+      backgroundColor: '#1e222d',//color you want to change
+    }
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -48,6 +53,11 @@ const ActivityStack = createStackNavigator(
 
 ActivityStack.navigationOptions = {
   tabBarLabel: 'Activity',
+  tabBarOptions:{
+    style: {
+      backgroundColor: '#1e222d',//color you want to change
+    }
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -73,6 +83,11 @@ const SettingsStack = createStackNavigator(
 
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Settings',
+  tabBarOptions:{
+    style: {
+      backgroundColor: '#1e222d',//color you want to change
+    }
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),

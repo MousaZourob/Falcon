@@ -25,12 +25,12 @@ export const activityStyle = StyleSheet.create({
         flexDirection: 'row',
         borderColor: 'white',
         borderWidth: 1,
-        backgroundColor: '#1b5e98',
+        backgroundColor: '#135c95',
         marginTop: 0,
         margin: 10,
-        marginBottom: 15,
+        marginBottom: 10,
         padding: 5,
-        borderRadius: 5
+        borderRadius: 10
     },
     leftCell: {
         flex: 4,
