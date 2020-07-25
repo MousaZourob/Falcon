@@ -10,7 +10,7 @@ export const activityStyle = StyleSheet.create({
     heading: {
         marginLeft: 10,
         margin: 5,
-        marginBottom: 2,
+        marginBottom: 5,
         fontSize: 22,
         fontWeight: 'bold',
         color: 'white'

@@ -1,7 +1,6 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 import alpacaAPI from '../services/alpaca'
-import polygonAPI from '../services/polygon'
 import { dashboardStyle } from '../styles/dashboardStyle'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -51,6 +50,10 @@ class DashboardScreen extends React.Component {
             }
         }) 
         
+        alpaca.getMarket().then((response) => {
+            console.log(response)
+        })
+
         /*
         const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
         const polygon = polygonAPI()
@@ -102,7 +105,7 @@ class DashboardScreen extends React.Component {
                         borderBottomWidth: 2,
                         marginBottom: -3,
                         marginLeft: -20,
-                        marginTop: 2
+                        marginTop: 5
                     }}
                 />
                 <View style = {dashboardStyle.accountCell}>
@@ -130,6 +133,7 @@ class DashboardScreen extends React.Component {
                         borderBottomColor: '#131722',
                         borderBottomWidth: 2,
                         marginBottom: 3,
+                        marginTop: 3
                     }}
                 />
                 <View style = {{flex: 1, flexDirection: 'row'}}>
@@ -163,6 +167,7 @@ class DashboardScreen extends React.Component {
                         borderBottomColor: '#131722',
                         borderBottomWidth: 2,
                         marginBottom: 3,
+                        marginTop: 3
                     }}
                 />
                 <FlatList 
