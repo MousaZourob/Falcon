@@ -25,7 +25,7 @@ export const activityStyle = StyleSheet.create({
         flexDirection: 'row',
         borderColor: 'white',
         borderWidth: 1,
-        backgroundColor: '#135c95',
+        backgroundColor: '#1b5e98',
         marginTop: 0,
         margin: 10,
         marginBottom: 15,
