@@ -39,7 +39,7 @@ export const dashboardStyle = StyleSheet.create({
     },
     pHeading: {
         marginLeft: 10,
-        marginBottom: 5,
+        marginBottom: 2,
         fontSize: 22,
         fontWeight: 'bold',
         color: 'white'

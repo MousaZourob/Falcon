@@ -51,9 +51,8 @@ class DashboardScreen extends React.Component {
             }
         }) 
         
-
-        // For when I get polygon api to work
-        /*const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
+        /*
+        const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
         const polygon = polygonAPI()
 
         symbols.map((symbol) => {
@@ -66,7 +65,8 @@ class DashboardScreen extends React.Component {
 
                 this.setState(state)
             })
-        })*/
+        })
+        */
     }
 
     renderRow = ({item}) => {
@@ -96,7 +96,15 @@ class DashboardScreen extends React.Component {
             {/*Account info view*/}
             <View style = {dashboardStyle.account}>
                 <Text style = {dashboardStyle.heading}>Account</Text>
-
+                <View
+                    style={{
+                        borderBottomColor: '#131722',
+                        borderBottomWidth: 2,
+                        marginBottom: -3,
+                        marginLeft: -20,
+                        marginTop: 2
+                    }}
+                />
                 <View style = {dashboardStyle.accountCell}>
                     <View style = {dashboardStyle.subCell}>
                         <Text style = {dashboardStyle.label}>Buying Power:</Text>
@@ -117,7 +125,13 @@ class DashboardScreen extends React.Component {
             {/*Market info view*/}
             <View style = {dashboardStyle.market}>
                 <Text style = {dashboardStyle.pHeading}>Market</Text>
-
+                <View
+                    style={{
+                        borderBottomColor: '#131722',
+                        borderBottomWidth: 2,
+                        marginBottom: 3,
+                    }}
+                />
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
@@ -144,6 +158,13 @@ class DashboardScreen extends React.Component {
             {/*Portfolio info view*/}
             <View style = {dashboardStyle.position}>
                 <Text style = {dashboardStyle.pHeading}>Positions</Text>
+                <View
+                    style={{
+                        borderBottomColor: '#131722',
+                        borderBottomWidth: 2,
+                        marginBottom: 3,
+                    }}
+                />
                 <FlatList 
                     data = {this.state.positions}
                     renderItem = {this.renderRow}

@@ -55,6 +55,13 @@ class ActivityScreen extends React.Component {
         return <View style = {activityStyle.screen}>
             <View style = {activityStyle.history}>
                 <Text style={activityStyle.heading}>Order history:</Text>
+                <View
+                    style={{
+                        borderBottomColor: '#131722',
+                        borderBottomWidth: 2,
+                        marginBottom: 10,
+                    }}
+                />
                 <FlatList 
                     data = {this.state.activities}
                     renderItem = {this.renderRow}
