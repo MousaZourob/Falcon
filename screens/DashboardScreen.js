@@ -50,26 +50,13 @@ class DashboardScreen extends React.Component {
             }
         }) 
         
-        alpaca.getMarket().then((response) => {
-            console.log(response)
-        })
-
-        /*
         const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
-        const polygon = polygonAPI()
 
-        symbols.map((symbol) => {
-            polygon.getQuote('SPY').then((response) => {
-                console.log('response from polygon API')
+        symbols.map((symbol) =>{
+            alpaca.getMarket(symbol).then((response) => {
                 console.log(response)
-                
-                let state = this.state
-                state[symbol] = response.data.ticker.lastTrade.p
-
-                this.setState(state)
             })
         })
-        */
     }
 
     renderRow = ({item}) => {
