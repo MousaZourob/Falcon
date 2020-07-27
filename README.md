@@ -1,16 +1,17 @@
 # Falcon
 ### Overview:
-Mobile app built with **React Native (JavaScript)** that provides users a platform to monitor the status of their **Alpaca Paper Trading** account. All the info is fetched using the **Alpaca Paper Trading API** and 
-
-![image](https://user-images.githubusercontent.com/66835262/88583131-d1295f80-d01d-11ea-95f6-95d441c5884d.png)
-![image](https://user-images.githubusercontent.com/66835262/88583177-ddadb800-d01d-11ea-830b-0c7623c2c783.png)
-
+Mobile app built with **React Native (JavaScript)** that provides users a platform to monitor the status of their **Alpaca Paper Trading** account. All the info is fetched using the **Alpaca Paper Trading API** and displayed on the Dashboard or Activity screen.
 
 ### Features:
 * View basic account info such as current balance and portfolio value
-* Market scoreboard with exchanges such as SPY to have a holistic view of the market
-* 
-* 
-* For holistic view of portfolio as well as market status
+* Market scoreboard with exchanges such as SPY to gain a holistic view of the status of the stock market
+* Detailed list of owned positions with comprehensive data on current price as well as change in price that updates live via the **Alpaca Paper Trading API**
+* Order history to track fradeulent purchases
+* Dynamic styling that changes colour and direction of arrow based on if position is positive or negative. Allows users to gain a complete picture on the status of their portfolio as well as the market
 
 ### Demo:
+
+![image](https://user-images.githubusercontent.com/66835262/88603085-1b243c80-d042-11ea-970f-066414ac795a.png)
+![image](https://user-images.githubusercontent.com/66835262/88603147-3f801900-d042-11ea-9ada-dd639054f888.png)
+
+
