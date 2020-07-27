@@ -23,7 +23,7 @@ const alpacaAPI = (baseURL = config.ALPACA_URL) => {
     
     const getAccount = () => api.get('v2/account')
     const getPositions = () => api.get('v2/positions')
-    const getMarket = (symbol) => data.get(`v1/bars/1Min?limit=1&symbols=${symbol}`)
+    const getMarket = (symbol) => data.get(`v1/bars/day?limit=1&symbols=${symbol}`)
     const getActivities = () => api.get('v2/account/activities')
 
     return {

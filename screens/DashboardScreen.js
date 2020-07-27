@@ -26,7 +26,7 @@ class DashboardScreen extends React.Component {
             positions: [],
         }
     }
-
+    
     componentDidMount() {
         // Alpaca API
         const alpaca = alpacaAPI()
@@ -54,10 +54,16 @@ class DashboardScreen extends React.Component {
         
         symbols.map((symbol) =>{
             alpaca.getMarket(symbol).then((response) => {
-                console.log(response.data)
-                
                 let state = this.state
                 state[symbol] = response.data[symbol][0].c
+                this.setState(state)
+            })
+        })
+        symbols.map((symbol) =>{
+            alpaca.getMarket(symbol).then((response) => {
+                let state = this.state
+                let temp = symbol + "1"
+                state[temp] = response.data[symbol][0].o
                 this.setState(state)
             })
         })
