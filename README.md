@@ -11,7 +11,7 @@ Mobile app built with **React Native (JavaScript)** that provides users a platfo
 
 ### Demo:
 
-![image width="500"](https://user-images.githubusercontent.com/66835262/88603085-1b243c80-d042-11ea-970f-066414ac795a.png")
-![image width="500"](https://user-images.githubusercontent.com/66835262/88603147-3f801900-d042-11ea-9ada-dd639054f888.png ")
+![image"](https://user-images.githubusercontent.com/66835262/88603085-1b243c80-d042-11ea-970f-066414ac795a.png")
+![image"](https://user-images.githubusercontent.com/66835262/88603147-3f801900-d042-11ea-9ada-dd639054f888.png ")
 
 
