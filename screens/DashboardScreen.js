@@ -62,9 +62,10 @@ class DashboardScreen extends React.Component {
         symbols.map((symbol) =>{
             alpaca.getMarket(symbol).then((response) => {
                 let state = this.state
-                let temp = symbol + "1"
+                let temp = symbol + "O"
                 state[temp] = response.data[symbol][0].o
                 this.setState(state)
+                console.log(state)
             })
         })
     }
@@ -136,25 +137,29 @@ class DashboardScreen extends React.Component {
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
-                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
+                        {this.state.DIA > this.state.DIAO ?<Ionicons name="md-arrow-dropup" size={22} color="#017b6f"></Ionicons>: null }
+                        {this.state.DIA < this.state.DIAO ?<Ionicons name="md-arrow-dropdown" size={22} color="#e53935"></Ionicons>: null }
                         <Text style = {dashboardStyle.indexPrice}>{this.state.DIA}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
-                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
+                        {this.state.SPY > this.state.SPYO ?<Ionicons name="md-arrow-dropup" size={22} color="#017b6f"></Ionicons>: null }
+                        {this.state.SPY < this.state.SPYO ?<Ionicons name="md-arrow-dropdown" size={22} color="#e53935"></Ionicons>: null }
                         <Text style = {dashboardStyle.indexPrice}>{this.state.SPY}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>QQQ</Text>
-                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
+                        {this.state.QQQ > this.state.QQQO ?<Ionicons name="md-arrow-dropup" size={22} color="#017b6f"></Ionicons>: null }
+                        {this.state.QQQ < this.state.QQQO ?<Ionicons name="md-arrow-dropdown" size={22} color="#e53935"></Ionicons>: null }
                         <Text style = {dashboardStyle.indexPrice}>{this.state.QQQ}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
-                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
+                        {this.state.IWM > this.state.IWMO ?<Ionicons name="md-arrow-dropup" size={22} color="#017b6f"></Ionicons>: null }
+                        {this.state.IWM < this.state.IWMO ?<Ionicons name="md-arrow-dropdown" size={22} color="#e53935"></Ionicons>: null }
                         <Text style = {dashboardStyle.indexPrice}>{this.state.IWM}</Text>
                     </View>
                 </View>
