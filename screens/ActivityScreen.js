@@ -23,11 +23,11 @@ class ActivityScreen extends React.Component {
         }
     }
 
+    // Alpaca API set up with APISauce
     componentDidMount() {
-        // Alpaca API
         const alpaca = alpacaAPI()
         
-        // Activities request
+        // Gets account activities
         alpaca.getActivities().then((response) => {
             if (response.ok) {
                 this.setState({
@@ -37,6 +37,7 @@ class ActivityScreen extends React.Component {
         })
     }
 
+    // Flatlist rendering for order history
     renderRow = ({item}) => {
         return (
             <View key = {item.id} style = {activityStyle.activity}>
@@ -53,7 +54,9 @@ class ActivityScreen extends React.Component {
 
     render() {
         return <View style = {activityStyle.screen}>
+            {/*Order history view */}
             <View style = {activityStyle.history}>
+                {/*Title with horizontal line*/}
                 <Text style={activityStyle.heading}>Order history</Text>
                 <View
                     style={{
@@ -62,6 +65,7 @@ class ActivityScreen extends React.Component {
                         marginBottom: 10,
                     }}
                 />
+
                 <FlatList 
                     data = {this.state.activities}
                     renderItem = {this.renderRow}

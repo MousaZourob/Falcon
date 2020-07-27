@@ -87,7 +87,7 @@ export const dashboardStyle = StyleSheet.create({
         color: '#e53935'
     },
     changeU: {
-        color: '#017b6f'
+        color: '#00cf00'
     },
     indexSymbol: {
         fontSize: 30,
