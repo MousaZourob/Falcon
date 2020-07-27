@@ -12,9 +12,8 @@ export const dashboardStyle = StyleSheet.create({
         margin: 5,
         flex: 3, 
         backgroundColor: '#2a2e39',
-        paddingBottom: 30,
+        paddingBottom: 40,
         paddingLeft: 10,
-        paddingTop: 5
     },
     heading: {
         fontSize: 22,
@@ -45,7 +44,7 @@ export const dashboardStyle = StyleSheet.create({
         color: 'white'
     },
     market: {
-        flex: 3,
+        flex: 4,
         backgroundColor: '#2a2e39',
         margin: 5,
         paddingTop: 5,
@@ -85,10 +84,10 @@ export const dashboardStyle = StyleSheet.create({
         color: '#bababa'
     },
     changeD: {
-        color: 'red'
+        color: '#e53935'
     },
     changeU: {
-        color: 'green'
+        color: '#017b6f'
     },
     indexSymbol: {
         fontSize: 30,

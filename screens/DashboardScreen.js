@@ -74,11 +74,11 @@ class DashboardScreen extends React.Component {
                     <Text style = {dashboardStyle.price}>${item.current_price} </Text> 
                     {item.avg_entry_price > item.current_price ? <Text style = {dashboardStyle.changeD}>
                         {(item.change_today * 100).toFixed(2)}% 
-                        <Ionicons name="md-arrow-dropdown" size={22} color="red"></Ionicons> 
+                        <Ionicons name="md-arrow-dropdown" size={22} color="#e53935"></Ionicons> 
                     </Text>  : null }
                     {item.avg_entry_price < item.current_price ? <Text style = {dashboardStyle.changeU}>
                         {(item.change_today * 100).toFixed(2)}% 
-                        <Ionicons name="md-arrow-dropup" size={22} color="green"></Ionicons> 
+                        <Ionicons name="md-arrow-dropup" size={22} color="#017b6f"></Ionicons> 
                     </Text>  : null }
                 </View>
             </View> 
@@ -130,21 +130,25 @@ class DashboardScreen extends React.Component {
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
+                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
                         <Text style = {dashboardStyle.indexPrice}>{this.state.DIA}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
+                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
                         <Text style = {dashboardStyle.indexPrice}>{this.state.SPY}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>QQQ</Text>
+                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
                         <Text style = {dashboardStyle.indexPrice}>{this.state.QQQ}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
+                        <Ionicons name="md-arrow-dropup" size={22} color="white"></Ionicons> 
                         <Text style = {dashboardStyle.indexPrice}>{this.state.IWM}</Text>
                     </View>
                 </View>
