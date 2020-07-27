@@ -23,7 +23,7 @@ class DashboardScreen extends React.Component {
             cash: 0,
             long_market_value: 0,
             portfolio_value: 0,
-            positions: []
+            positions: [],
         }
     }
 
@@ -51,10 +51,14 @@ class DashboardScreen extends React.Component {
         }) 
         
         const symbols = ['DIA', 'SPY', 'QQQ', 'IWM']
-
+        
         symbols.map((symbol) =>{
             alpaca.getMarket(symbol).then((response) => {
-                console.log(response)
+                console.log(response.data)
+                
+                let state = this.state
+                state[symbol] = response.data[symbol][0].c
+                this.setState(state)
             })
         })
     }
@@ -126,22 +130,22 @@ class DashboardScreen extends React.Component {
                 <View style = {{flex: 1, flexDirection: 'row'}}>
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>DIA</Text>
-                        <Text style = {dashboardStyle.indexPrice}>264.69</Text>
+                        <Text style = {dashboardStyle.indexPrice}>{this.state.DIA}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>SPY</Text>
-                        <Text style = {dashboardStyle.indexPrice}>320.88</Text>
+                        <Text style = {dashboardStyle.indexPrice}>{this.state.SPY}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>QQQ</Text>
-                        <Text style = {dashboardStyle.indexPrice}>255.56</Text>
+                        <Text style = {dashboardStyle.indexPrice}>{this.state.QQQ}</Text>
                     </View>
 
                     <View style = {dashboardStyle.scoreBoard}>
                         <Text style = {dashboardStyle.indexSymbol}>IWM</Text>
-                        <Text style = {dashboardStyle.indexPrice}>146.08</Text>
+                        <Text style = {dashboardStyle.indexPrice}>{this.state.IWM}</Text>
                     </View>
                 </View>
             </View>

@@ -54,7 +54,7 @@ class ActivityScreen extends React.Component {
     render() {
         return <View style = {activityStyle.screen}>
             <View style = {activityStyle.history}>
-                <Text style={activityStyle.heading}>Order history:</Text>
+                <Text style={activityStyle.heading}>Order history</Text>
                 <View
                     style={{
                         borderBottomColor: '#131722',
