@@ -10,7 +10,7 @@ Mobile app built with **React Native (JavaScript)** that provides users a platfo
 * Conditional styling that changes colour and direction of arrow based on if position is positive or negative. Allows users to gain a complete picture on the status of their portfolio as well as the market
 
 ### Demo:
-<img src="https://github.com/MousaZourob/Falcon/blob/master/demo/demo1.png" width="100px"
+<img src="https://github.com/MousaZourob/Falcon/blob/master/demo/demo1.png" width="100px">
 
 ### Packages: 
 * **React Native (0.61):** https://reactnative.dev/docs/0.61/getting-started
