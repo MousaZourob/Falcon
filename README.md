@@ -7,7 +7,7 @@ Mobile app built with **React Native (JavaScript)** that provides users a platfo
 * Market scoreboard with indexes and exchanges such as SPY to gain a holistic view of the status of the stock market
 * Detailed list of owned positions with comprehensive data on current price as well as change in price that updates live via the **Alpaca Paper Trading API**
 * Order history to track BUY and SELL orders of positions
-* Conditional styling that changes colour and direction of arrow based on if position is positive or negative. Allows users to gain a complete picture on the status of their portfolio as well as the market
+* **Conditional styling** that changes colour and direction of arrow based on if position is positive or negative. Allows users to gain a complete picture on the status of their portfolio as well as the market
 
 ### Demo:
 <img src="https://github.com/MousaZourob/Falcon/blob/master/demo/demo1.png" width="400px"> <img src="https://github.com/MousaZourob/Falcon/blob/master/demo/demo2.png" width="400px">
