@@ -1,6 +1,6 @@
 # Falcon
 ### Overview:
-Mobile app built with **React Native (JavaScript)** that provides users a platform to monitor the status of their **Alpaca Paper Trading** account. All the info is fetched via **JSON** messages and updated live using the **Alpaca Paper Trading API**, and then displayed on the Dashboard or Activity screen. The API was set up using the **API Sauce** package and the minimal UI and styling was done with **CSS**. 
+Mobile app built with **React Native (JavaScript)** that provides users a platform to monitor the status of their **Alpaca Paper Trading** account (front-end for PyTrader). All the info is fetched via **JSON** messages and updated live using the **Alpaca Paper Trading API**, and then displayed on the Dashboard or Activity screen. The API was set up using the **API Sauce** package and the minimal UI and styling was done with **CSS**. 
 
 ### Features:
 * View core account info such as current balance and portfolio value
