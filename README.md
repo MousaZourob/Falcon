@@ -12,7 +12,7 @@ Mobile app built with **React Native (JavaScript)** that provides users a platfo
 ### Demo:
 <img src="https://github.com/MousaZourob/Falcon/blob/master/demo/demo1.png" width="400px"> <img src="https://github.com/MousaZourob/Falcon/blob/master/demo/demo2.png" width="400px">
 
-### Packages: 
+### Libraries and Frameworks Used:
 * **React Native (0.61):** https://reactnative.dev/docs/0.61/getting-started
 * **Alpaca API:** https://alpaca.markets/docs/api-documentation/api-v2/
 * **API Sauce for Node and React Native:** https://github.com/infinitered/apisauce
